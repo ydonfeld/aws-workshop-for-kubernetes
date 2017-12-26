@@ -1270,21 +1270,21 @@ Alternatively, a namespace can be created using `kubectl` as well.
 . Create a Deployment:
 
 	$ kubectl -n dev2 apply -f templates/deployment.yaml 
-	deployment "nginx-deployment-ns" created
+	deployment "nginx-deployment" created
 
 . Get Deployments in the newly created Namespace:
 
 	$ kubectl get deployments -n dev2
 	NAME               DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
-	nginx-deployment-ns   3         3         3            3           1m
+	nginx-deployment   3         3         3            3           1m
 
 . Get Deployments in all Namespaces:
 
 	$ kubectl get deployments --all-namespaces
 	NAMESPACE     NAME                  DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 	default       nginx-deployment      3         3         3            3           1h
-	dev           nginx-deployment-ns   3         3         3            3           1h
-	dev2          nginx-deployment-ns   3         3         3            3           1m
+	dev           nginx-deployment   3         3         3            3           1h
+	dev2          nginx-deployment  3         3         3            3           1m
 	kube-system   dns-controller        1         1         1            1           5h
 	kube-system   kube-dns              2         2         2            2           5h
 	kube-system   kube-dns-autoscaler   1         1         1            1           5h
